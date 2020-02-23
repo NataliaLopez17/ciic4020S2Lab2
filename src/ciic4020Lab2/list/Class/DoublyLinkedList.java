@@ -286,11 +286,11 @@ public class DoublyLinkedList<E> implements List<E> {
 		Node curNode = header.getNext();
 		int curPos = 0;
 		// Traverse the list until we find the element or we reach the end
-		while (curNode != trailer && !curNode.getValue().equals(obj)) {
+		while (curPos < this.size() && !curNode.getValue().equals(obj)) {
 			curPos++;
 			curNode = curNode.getNext();
 		}
-		if (curNode != trailer)
+		if (curPos < this.size())
 			return curPos;
 		else
 			return -1;

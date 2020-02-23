@@ -3,7 +3,6 @@ package ciic4020Lab2.list.Class;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import javax.swing.text.html.parser.Element;
 import ciic4020Lab2.list.Interface.List;
 
 public class ArrayList<E> implements List<E> {
@@ -221,10 +220,11 @@ public class ArrayList<E> implements List<E> {
 
 	@Override
 	public List<E> reverse() {
-		List<E> result = new ArrayList<E>(this.size());
-		for(int i = this.size(); i > 0; i--) {
-			result.add(this.get(i));
+		ArrayList<E> result = new ArrayList<E>(this.size());
+		for (int i = this.size() - 1; i >= 0; i--) {
+			result.add(this.elements[i]);
 		}
+		
 		return result;
 	}
 }

@@ -45,12 +45,12 @@ public class Lab2Tester {
 	@Test
 	public void testTotalCount() {
 		List<String>[] lists = new List[6];
-		lists[0] = l_1;
-		lists[1] = l_2; 
+		lists[0] = sl_1;
+		lists[1] = sl_2; 
 		lists[2] = sl_1;
 		lists[3] = sl_2;
 		lists[4] = dl_3;
-		lists[5] = l_3;
+		lists[5] = sl_3;
 		assertTrue("Should return 4" , Main.totalCount("Ian", lists) == 4);
 		assertTrue("Should return 6" , Main.totalCount("Tim", lists) == 6);
 		assertTrue("Should return 2" , Main.totalCount("Lil", lists) == 2);
